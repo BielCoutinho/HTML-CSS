@@ -1,0 +1,41 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap');
+ 
+body{
+    background: url(img/fundo.jpg) no-repeat;
+}
+ 
+table{
+    border: 2px solid #fde828; /*Estilos de borda: dotted, dashed, solid, double, groove, ridge, outset, inset*/
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ 
+}
+h1{
+    font-family: "Mountains of Christmas", serif;
+}
+
+td{
+    border: 2px solid rebeccapurple;
+}
+tr#menu{
+    background: rgb(0, 174, 255);
+    color: aquamarine;
+    font-size: 1.3em;
+}
+.rodape{
+    font-size: 1.2em;
+    background: green;
+    font-weight: bold;
+}
+#menu a{
+    color: blueviolet;
+    text-decoration: underline;
+}
+#menu a:hover{
+    color: gray;
+    text-decoration: underline;
+}

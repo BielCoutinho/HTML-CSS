@@ -1,0 +1,316 @@
+@charset "Utf-8";
+ 
+/*Fontes externas*/
+ 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+ 
+/*Váriaveis CSS*/
+:root{
+    --cor1: #e8e8e8;
+    --cor2: #a1a1a1;
+    --cor3: #434343;
+    --cor4: #173261;
+    --cor5: #FFF;
+    --cor6: #000;
+ 
+ 
+    --titulo: 'Open Sans', sans-serif;
+    --texto:  'Sour Gummy', sans-serif;
+}
+ 
+/*Reset CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+ 
+body{
+    background: #555570;
+}
+/*Layout*/
+.container{
+    margin: 0 auto;
+    /*background: #09abeb;*/
+}
+#topo{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+.botao{
+    text-decoration: none;
+    color: var(--cor3);
+    font-size: 1.3em;
+    font-weight: 700;
+    background: #181717;
+    border: 1px solid var(--cor4);
+    border-radius: 25px;
+    padding: 10px 40px;
+}
+ 
+.flex{
+    display: flex;
+    justify-content: space-between;
+    /*background: #fd7c03;*/
+ 
+}
+.flex2{
+    display: flex;
+    align-items: center;
+}
+.flex3{
+    display: flex;
+    flex-direction: column;
+}
+ 
+/*SMARTPHONE PORTRAIT*/
+/*Cabeçalho*/
+header{
+    height: 60px;
+}
+#check{
+    display: none;
+}
+label{
+    font-size: 3em;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+}
+nav ul{
+    list-style: none;
+    /*background: #8c67f3;*/
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    transition: all 0.50s;
+}
+nav ul li{
+    padding: 20px;
+    border-bottom: #f1ebeb 1px solid;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(3, 132, 253);
+    font-family: var(--cor6);
+    font-style: 1.5em;
+}
+#check:checked ~ ul{
+    right: 0;
+}
+ 
+/*DESTAQUE*/
+main{
+    height: 75vh;
+    background: url(img/banner_front.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: rgb(0, 255, 221);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--titulo)
+}
+main h1{
+    font-size: 3em;
+}
+main h2{
+    font-size: 1.5em;
+    margin: 20px 0px 50px 0px;
+}
+
+/*SOBRE*/
+
+#sobre{
+    background: url(img/background5.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0px;
+}
+.destaque_sobre{
+    display: none;
+}
+.texto_sobre{
+    color: var(--cor3);
+    padding: 0px 10px;
+    font-family: var(--texto);
+}
+.texto_sobre h2{
+    margin-bottom: 10px;
+}
+
+.texto_sobre p{
+    font-size: 1.3em;
+}
+ 
+.topico_sobre{
+    margin-top: 20px;
+}
+.topico_sobre img{
+    margin-top: 10px;
+}
+
+/*One Page*/
+
+#onepage{
+    padding: 50px 10px;
+}
+#onepage h2{
+    font-family: var(--titulo);
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+#onepage p{
+    font-family: var(--texto);
+    margin-bottom: 25px;
+    font-size: 1.4em;
+}
+
+.video iframe{
+    width: 340px;
+    height: 190px;
+}
+
+/*SMARTPHONE LANDSCAPE*/
+@media (min-width:576px) {
+    /*body{
+        background: #d83a54;
+       
+    }*/
+    .container{
+        max-width: 540px;
+    }
+ 
+    label{
+        right: 60px;
+    }
+   
+    /*DESTAQUE*/
+    main h1, main h2{
+        text-shadow: #03fd80 0.2em 0.2em 0.2em;
+   
+    }
+
+    /*ONEPAGE*/
+
+    .video iframe {
+        width: 560px;
+        height: 315px;
+
+    }
+}
+ 
+/*TABLET PORTRAIT*/
+@media (min-width:768px) {
+    /*body{
+        background: #6f44e4;
+ 
+    }*/
+    .container{
+        max-width: 720px;
+    }
+    label{
+        right: 35px;
+    }
+    /*DESTAQUE*/
+    main{
+        height: 45vh;
+    }
+    main h1{
+        font-size: 5em;
+    }
+    main h2{
+        font-size: 2em;
+    }
+
+    /*Sobre*/
+    .texto_sobre h2{
+        font-size: 2.8em;
+    }
+    .texto_sobre p{
+        font-size: 1.8em;
+    }
+}
+
+
+ 
+/*TABLET LANDSCAPE*/
+@media (min-width:992px) {
+    /*body{
+        background: #61b909;
+ 
+    }*/
+    .container{
+        max-width: 960px;
+    }
+    /*DESTAQUE*/
+    main{
+        height: 70vh;
+    }
+}
+ 
+/*PC*/
+@media (min-width:1200px) {
+    /*body{
+        background: #09abeb;
+ 
+    }*/
+    .container{
+        max-width: 1140px;
+    }
+
+     /*Cabeçalho*/
+     header{
+        height: 125px;
+    }
+    .logo img{
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    label{
+        display: none;
+    }
+    nav ul{
+        position: static;
+        height: auto;
+        background: transparent;
+        margin-top: 50px;
+    }
+    nav ul li{
+        float: left;
+        border: 0;
+    }
+    nav ul li a{
+        color: rgb(255, 0, 234);
+    }
+    nav ul li a:hover{
+        color: rgb(255, 0, 140);
+    }
+
+    /*SOBRE*/
+    .destaque_sobre{
+        display: inline;
+    }
+    .destaque_sobre img{
+        border-radius: 50%;
+        margin: 50px;
+    }
+    #sobre{
+        background-attachment: fixed; /*efeito paralax*/
+    }
+
+    /*ONEPAGE*/
+
+    .flex3{
+        flex-direction: row;
+        align-items: center;
+    }
+    
+}
+ 
