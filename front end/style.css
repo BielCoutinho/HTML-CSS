@@ -42,11 +42,11 @@ body{
 }
 .botao{
     text-decoration: none;
-    color: var(--cor3);
+    color: var(--cor1);
     font-size: 1.3em;
     font-weight: 700;
-    background: #181717;
-    border: 1px solid var(--cor4);
+    background: #030303;
+    border: 1px solid var(--cor1);
     border-radius: 25px;
     padding: 10px 40px;
 }
@@ -65,6 +65,23 @@ body{
     display: flex;
     flex-direction: column;
 }
+.flex4{
+    display: flex;
+    flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+.flex5 {
+    display: flex;
+}
+
+.flex6{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
 
 .card {
     margin-top: 25px;
@@ -87,7 +104,7 @@ body{
 }
 .card p {
     text-align: left;
-    padding: 10px 30px 50px 30px;
+    padding: 10px 30px 40px 30px;
     font-family: var(--texto);
     font-size: 1.2em;
 }
@@ -124,8 +141,8 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: rgb(3, 132, 253);
-    font-family: var(--cor6);
-    font-style: 1.5em;
+    font-family: var(--texto);
+    font-style: var(--titulo);
 }
 #check:checked ~ ul{
     right: 0;
@@ -242,6 +259,42 @@ main h2{
     font-family: var(--titulo);
 }
 
+/*RODAPÉ*/
+address {
+    padding: 35px 10px 50px 10px;
+    background: url(img/background5.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--cor1);
+}
+address a {
+    text-decoration: none;
+}
+address img{
+    padding-top: 15px;
+}
+.icone_local{
+    display: none;
+}
+
+.dados{
+    margin: 30px 0px 15px 0px;
+}
+
+.google_maps{
+    display: none;
+
+}
+footer{
+    padding: 50px;
+    background: var(--cor4);
+    color: var(--cor1);
+    text-align: center;
+}
+.social{
+    margin: 15px 0px;
+}
+
 /*SMARTPHONE LANDSCAPE*/
 @media (min-width:576px) {
     /*body{
@@ -268,6 +321,13 @@ main h2{
         width: 560px;
         height: 315px;
 
+    }
+
+    /*Rodapé*/
+    .flex5{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 }
  
@@ -391,6 +451,24 @@ main h2{
         width: 250px;
         height: 250px;
     }
-    
+
+    /*RODAPÉ*/
+    .icone_local{
+        display: inline;
+    }
+    .icone_mapa{
+        display: none;
+    }
+    .google_maps{
+        display: inline;
+    }
+    .flex6{
+        flex-direction: row-reverse;
+    }
+    .address{
+        font-size: 1.5em;
+        font-family: var(--texto);
+        font-weight: 700;
+    }
 }
 
